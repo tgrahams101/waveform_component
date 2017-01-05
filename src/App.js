@@ -4,13 +4,21 @@ import './App.css';
 
 class App extends Component {
   render() {
+    var waveform = new window.Waveform({
+      container: document.getElementById("test"),
+      data: this.props.data,
+      innerColor: "#2ec6b3",
+      outerColor: "#d6822a",
+      width: "2000"
+    });
     return (
       <div className="App">
-  
-        <p>{this.props.data.map(item => <h2> {item}</h2>) }</p>
+       <p>Sample waveform render</p>
+       <br />
       </div>
     );
   }
 }
+
 
 export default App;
